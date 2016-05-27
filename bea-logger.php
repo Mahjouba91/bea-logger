@@ -157,7 +157,7 @@ class Bea_Log {
 		}
 
 		// Rename the file
-		rename( $file_path, sprintf( '%s-%s%s', $this->file_path, date( 'Y-m-d-H-i-s' ), $this->file_extension ) );
+		rename( $file_path, sprintf( '%s-%s%s', $this->file_path, date( 'Y-m-d-H-i-s', get_option('timezone_string') ), $this->file_extension ) );
 	}
 
 	/**
